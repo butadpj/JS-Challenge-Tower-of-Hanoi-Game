@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+}
+
+.towers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+}
+
+#t1, #t2, #t3 {
+    position: relative;
+    width: 2rem;
+    height: 60vh;
+    background-color: rgb(151, 107, 66);
+    margin: 2rem 10rem;
+    padding: 2rem;  
+}
+
+.t1d {
+    position: absolute;
+    bottom: 0%;
+    left: 16.4%;
+    transform: translate(-50%, -10%);
+    z-index: 5;
+}
+
+.t2d {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 5;
+}
+
+.t3d {
+    position: absolute;
+    bottom: 0%;
+    left: 83.3%;
+    transform: translate(-50%, -10%);
+    z-index: 5;
+}
+
+
+
+#d1, #d2, #d3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25%;
+    transition: 0.4s;
+}
+
+
+#d1 {
+    width: 10rem;
+    height: 5rem;
+    background: #000;
+
+}
+
+#d2 {
+    width: 15rem;
+    height: 5rem;
+    background: rgb(173, 62, 62);
+}
+
+#d3 {
+    width: 20rem;
+    height: 5rem;
+    background: rgb(55, 179, 127);
+}
+
+.moves {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(231, 231, 231);
+}
+
+.destination {
+    text-align: center;
+    padding-top: 2rem;
+    color: rgb(192, 152, 44);
+}
+
+.active {
+    opacity: 0.8;
+    margin-bottom: 5rem;
+}
