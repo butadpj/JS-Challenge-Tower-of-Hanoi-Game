@@ -153,7 +153,7 @@ html, body {
     .t2d {
         position: absolute;
         bottom: 65%;
-        left: 46.5%;
+        left: 45.8%;
         transform: translate(-50%, -10%);
         z-index: 5;
     }
@@ -161,7 +161,7 @@ html, body {
     .t3d {
         position: absolute;
         bottom: 65%;
-        left: 76.57%;
+        left: 76%;
         transform: translate(-50%, -10%);
         z-index: 5;
     }
