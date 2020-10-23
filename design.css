@@ -105,6 +105,11 @@ html, body {
 }
 
 @media only screen and (max-width: 560px){
+
+    body {
+        touch-action: none;
+    }
+
     .game-wrapper {
         transform: rotate(90deg);
         width: 100vh;
