@@ -3,21 +3,31 @@ let t2 = document.querySelector('#t2')
 let t3 = document.querySelector('#t3')
 let activeDisc = []
 let totalMoves = 0
+let notes = document.querySelector('.notes').children
+for (let i = 0; i < notes.length; i++) {
+    notes[i].volume = 0.2
+}
 checkDestination(3)
+let randomNum
+
 
 document.addEventListener('click', function(e){
+    randomNum = Math.floor(Math.random() * 3)
     if (e.target.classList.contains('disc')) {
         let currentDisc = e.target
         let beforeDisc = e.target.previousElementSibling
 
         if (beforeDisc == null) {
             activeDisc.unshift(currentDisc)
-            activeDisc[0].classList.add('active') 
+            activeDisc[0].classList.add('active')
+            notes[randomNum].play()
+            notes[randomNum].currentTime = 0
         }        
     }
 })
 
 document.addEventListener('click', function(e) {
+    randomNum = Math.floor(Math.random() * 3)
     if (activeDisc.length > 0) {
         if (e.target === activeDisc[0]) {
             return
@@ -27,6 +37,8 @@ document.addEventListener('click', function(e) {
             totalMoves = totalMoves + 1
             moves.innerHTML = totalMoves
             activeDisc = []
+            notes[randomNum].play()
+            notes[randomNum].currentTime = 0
         }
     }
 })
